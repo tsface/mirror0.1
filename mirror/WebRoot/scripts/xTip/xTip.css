@@ -1,0 +1,15 @@
+
+.tip-styleA{position:absolute;left:60px; min-width:50px;border:1px solid #D0BE8D;background:#FFFBEC;z-index:100;}
+.tip-styleA .tipHd{height:22px;margin-bottom:5px;padding:0 10px;line-height:22px;color:#666;background:#F4E9C5;}
+/*提示阴影*/
+.tip-styleA .tipShadowX,.tip-styleA .tipShadowY{position:absolute;bottom:-3px;right:-3px;height:2px;background:url(img/tip_styleA_shadow.png) repeat;}
+.tip-styleA .tipShadowY{width:2px;bottom:-1px;background-repeat:repeat-y;}
+.tip-styleA .tipBd{padding:5px 20px 5px 5px;}
+/*提示箭头*/
+.tip-styleA .tipArrow{position:absolute;width:20px;height:13px;background:url(img/tip_styleA_arrow.png);}
+.tip-styleA .tipArrow.down{bottom:-13px;background-position:0 0;}
+.tip-styleA .tipArrow.up{top:-13px;background-position:-20px 0;}
+.tip-styleA .tipArrow.up2{top:-13px;background-position:-40px 0;}
+/*提示关闭图标*/
+.tip-styleA .tipClose{position:absolute;right:3px;top:3px;width:16px;height:16px;background:url(img/styleA_close.png) no-repeat;}
+.tip-styleA .tipClose:hover{background:url(img/styleA_close_hover.png) no-repeat;}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+  <title>tree</title>
+  <script src="deps.js"></script>
+  <script src="sea.js"></script>
+  <script src="datav.js"></script>
+  <script src="tree.js"></script>
+   
+
+</head>
+
+<body>
+  <div id="chart"></div>
+  <script>
+  var dir = location.href.replace(/\\/g,'/').replace(/\/[^\/]*$/, '');
+  seajs.config({
+	    alias: {
+		'DataV': dir+"/datav.js",
+		'Tree': dir+"/tree.js"
+      }
+	});
+  seajs.use(["Tree", "DataV"], function (Tree, DataV) {
+      var tree = new Tree("chart", {width:800,height:800});
+		 var source  =  [
+		       ["ID", "name", "size", "parentID", "value"],
+		       ["0",'刘沛','','',""],
+		       ["1",'53290136254528756',111,'0',"数据源：111-航班信息<br>  来源网站：华中农业大学<br> 最后出现时间：2013-06-02 23:59:08"],
+		       ["2",'13542685431',111,'0',"数据源：111-航班信息 <br> 来源网站：华中农业大学 <br>最后出现时间：2013-06-02 23:59:08"],
+			   ["3",'江苏省南京市建邺区上海北路',111,'1',"数据源：111-航班信息<br>  来源网站：华中农业大学 <br>最后出现时间：2013-06-02 23:59:08"],
+		       ["4",'02511023854',111,'2',"数据源：111-航班信息 <br>来源网站：华中农业大学 <br>最后出现时间：2013-06-02 23:59:08"],
+			   ["5",'jieke@qq.com',111,'1',"数据源：111-航班信息 <br> 来源网站：华中农业大学 <br>最后出现时间：2013-06-02 23:59:08"],
+		       ["6",'刘沛',111,'2',"数据源：111-航班信息  <br>来源网站：华中农业大学 <br>最后出现时间：2013-06-02 23:59:08"],
+			   ["7",'analytics3',111,'1,2',"数据源：111-航班信息<br>来源网站：华中农业大学<br>最后出现时间：2013-06-02 23:59:08"],
+		       ["9",'analytics4',111,'7',"数据源：111-航班信息 <br> 来源网站：华中农业大学 <br>最后出现时间：2013-06-02 23:59:08"],
+		       ["10",'cluster4',111,'7',"数据源：111-航班信息  <br>来源网站：华中农业大学 <br>最后出现时间：2013-06-02 23:59:08"],
+			   ["11",'analytics5',111,'7',"数据源：111-航班信息<br>  来源网站：华中农业大学 <br>最后出现时间：2013-06-02 23:59:08"],
+		       ["12",'cluster5',111,'7',"数据源：111-航班信息 <br> 来源网站：华中农业大学<br> 最后出现时间：2013-06-02 23:59:08"],
+		     ];
+      tree.setSource(source);
+       tree.render();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,361 @@
+html{overflow:hidden;}
+/*clear*/
+.ue-clear:after{content: ".";display:block;height:0;clear:both;visibility:hidden;}
+.ue-clear{display:inline-block;}
+*html .ue-clear{height:1%;}
+.ue-clear{display:block;}
+
+.outsideWindow{ position:fixed !important; top:-9999px !important; left:-9999px !important;}
+/***** 背景图 *****/
+#container{margin:0px; background:url(images/desktop/default.png) center center no-repeat; min-height:500px; min-width:1000px;}
+/***** 16X16带hover状态公用图标 *****/
+.icon{ display:inline-block; width:16px; height:16px; background:url(images/desktop/icon_normal.png);}
+.icon:hover{background:url(images/desktop/icon_hover.png);}
+.icon.iconClosetype1{ background-position:0 0;}
+.icon.iconClosetype2{ background-position:-16px 0;}
+.icon.iconPlus{ background-position:-32px 0;}
+.icon.back{ background-position:-64px 0;}
+/***** 16X16无状态图标 *****/
+.ico{ display:inline-block; width:16px; height:16px; background:url(images/desktop/ico.png);}
+.ico.correct{ background-position:0 0;}
+.ico.global{ background-position:-16px 0;}
+.ico.file{ background-position:-32px 0;}
+.ico.haveCheck{ background-position:-48px 0;}
+.ico.menuRight{ background-position:-64px 0;}
+.ico.menuRight2{ background-position:-80px 0;}
+/***** 窗口头部操作图标 *****/
+.title_icon{ display:inline-block; width:18px; height:18px; background:url(images/desktop/title_normal.png);}
+.title_icon:hover{ background:url(images/desktop/title_hover.png);}
+.title_icon.active{ background:url(images/desktop/title_active.png);}
+.title_icon.home{ background-position:0 0;}
+.title_icon.refresh{ background-position:-18px 0;}
+.title_icon.min{ background-position:-36px 0;}
+.title_icon.max{ background-position:-54px 0;}
+.title_icon.closeWindow{ background-position:-72px 0;}
+.title_icon.goBack{ background-position:-90px 0;}
+.title_icon.goAhead{ background-position:-108px 0;}
+
+/***** 搜索区域部分 *****/
+.searchArea{ position:absolute;top:10px; left:4px; z-index:14;}
+.searchArea .logoWrap{ position:relative; float:left; padding:17px 0 0 19px; width:62px; height:67px; background:url(images/desktop/logowrap.png);}
+.searchArea .logo{ width:45px; height:50px; background:url(images/desktop/logo.png); cursor:pointer;}
+/**** 展开收起的箭头 ****/
+.searchArea .ico{ float:left; width:4px; height:7px; margin:15px 0 0 7px; background:url(images/desktop/search/arrow_normal.png)}
+.searchArea .ico.rightArrow{ background-position:0 0 !important;}
+.searchArea .ico.leftArrow{ background-position:4px 0 !important;}
+.searchArea .ico:hover{ background:url(images/desktop/search/arrow_hover.png); cursor:pointer}
+/*** 正常形态的搜索区域 ***/
+.normalState{ float:left; margin:21px 0 0 -10px;}
+.normalState .midfill{ float:left; width:45px; height:41px; background:url(images/desktop/search/normal_mid.png) repeat-x;}
+.normalState .corner{ float:left; width:58px; height:41px; background:url(images/desktop/search/normal_corner.png);}
+.normalState .zoom{ float:left; width:23px; height:23px; margin:8px 0 0 20px; background:url(images/desktop/search/zoom.png);}
+.normalState:hover .ico{ background:url(images/desktop/search/arrow_hover.png)}
+/*** 完全收起形态的搜索区域 ***/
+.smallState{ display:none; float:left; margin:21px 0 0 -10px;}
+.smallState .midfill{ float:left; width:6px; height:41px; background:url(images/desktop/search/small_mid.png) repeat-x;}
+.smallState .corner{ float:left; width:21px; height:41px; background:url(images/desktop/search/small_corner.png);}
+.smallState .zoom{ float:left; width:19px; height:19px; margin:11px 0 0 0px; background:url(images/desktop/search/zoom_small.png);}
+.smallState:hover .corner{ background:url(images/desktop/search/small_corner_hover.png);}
+/*** 完全展开形态的搜索区域 ***/
+.expandState{ display:none; float:left; width:421px; margin:3px 0 0 -10px;}
+.expandState .leftfill{ float:left; width:20px; height:65px; background:url(images/desktop/search/expand_left.png);}
+.expandState .leftCorner{ float:left; width:26px; height:65px; background:url(images/desktop/search/expand_left_corner.png);}
+.expandState .midfill{ float:left; width:293px; height:65px; background:url(images/desktop/search/expand_right_mid.png) top center;}
+.expandState .rightCorner{ float:left; width:16px; height:65px; background:url(images/desktop/search/expand_right_corner.png);}
+.expandState .rightfill{ float:left; width:30px; height:65px; background:url(images/desktop/search/expand_right_fill.png);}
+.expandState .searchCorner{ float:left; width:29px; height:65px; background:url(images/desktop/search/expand_right.png);}
+.expandState .zoom{ float:left; width:23px; height:23px; margin:27px 0 0 -15px; background:url(images/desktop/search/zoom.png);}
+.expandState .zoom:hover{ background:url(images/desktop/search/zoom_hover.png);}
+.expandState .zoom.active{ background:url(images/desktop/search/zoom_active.png);}
+.expandState .ico{ margin:34px 0 0 9px;}
+.expandState input[type=text]{ float:left; width:100%; margin-top:8px; background:none; color:#FFFFFF; border:none; outline:none;}
+.menuGroup{ float:left; width:100%; margin-top:4px;}
+.menuGroup li{ float:left; cursor:pointer; line-height:16px;}
+.menuGroup .leftTextCorner{ float:left; width:10px; height:17px;}
+.menuGroup .rightTextCorner{ float:left; width:10px; height:17px;}
+.menuGroup .text{ float:left; height:17px; color:#82BBDC;}
+.menuGroup li:hover .leftTextCorner{background:url(images/desktop/search/left_text_corner_hover.png);}
+.menuGroup li:hover .rightTextCorner{background:url(images/desktop/search/right_text_corner_hover.png);}
+.menuGroup li:hover .text{ color:#FFF; background:url(images/desktop/search/text_mid_hover.png);}
+.menuGroup .ue-state-active .leftTextCorner{background:url(images/desktop/search/left_text_corner.png) !important;}
+.menuGroup .ue-state-active .rightTextCorner{ background:url(images/desktop/search/right_text_corner.png) !important;}
+.menuGroup .ue-state-active .text{ color:#FFF; font-weight:bold; background:url(images/desktop/search/text_mid.png) !important;}
+/***** 功能入口及小工具区域 *****/
+.menuBar{ position:absolute; top:100px; left:15px;width:165px; z-index:14}
+.menuBar.miniMenu{ width:80px;}
+.menuBar.miniMenu .textHide{ display:none;}
+/*** 用户头像 ***/
+.menuBar .photoPanel{ display:block; position:relative; width:50px; height:50px; margin:0 auto; padding:5px 8px 6px 5px; background:url(images/desktop/menu/photoWrap.png);}
+/*** 用户头像 ***/
+.menuBar .toggleBar{ position:absolute; right:-10px; top:60px; width:10px; height:84px; background:url(images/desktop/menu/togglebar.png);}
+.menuBar .ue-state-default .switchIco{ float:left; width:4px; height:7px; margin:37px 0 0 2px; background:url(images/desktop/menu/switch_normal.png);}
+.menuBar .ue-state-hover .switchIco{ background:url(images/desktop/menu/switch_hover.png);}
+.menuBar .ue-state-default .switchIco.right{ background-position:0 0;}
+.menuBar .ue-state-default .switchIco.left{ background-position:4px 0;}
+/*** 主体部分 ***/
+/** 九宫格布局 **/
+.menuBar .bodyPanel{ margin-top:-20px; width:100%;}
+.menuBar .bodyPanel .hdPanel{height:11px; padding:0px 10px 0px 13px;}
+.menuBar .bodyPanel .hdPanel .leftCorner{ float:left; width:13px; height:100%; margin-left:-13px; background:url(images/desktop/menu/body/lefttop.png);}
+.menuBar .bodyPanel .hdPanel .middle{ float:left; width:100%; height:100%; background:url(images/desktop/menu/body/topmid.png);}
+.menuBar .bodyPanel .hdPanel .rightCorner{ float:left; width:10px; height:100%; margin-right:-10px; background:url(images/desktop/menu/body/righttop.png);}
+.menuBar .bodyPanel .bdPanel{height:315px; padding:0px 7px 0px 7px;}
+.menuBar .bodyPanel .bdPanel .leftCorner{ float:left; width:7px; height:100%; margin-left:-7px; background:url(images/desktop/menu/body/midleft.png);}
+.menuBar .bodyPanel .bdPanel .middle{ float:left; width:100%; height:100%; background:url(images/desktop/menu/body/middle.png);}
+.menuBar .bodyPanel .bdPanel .rightCorner{ float:left; width:7px; height:100%; margin-right:-7px; background:url(images/desktop/menu/body/midright.png) top right;}
+.menuBar .bodyPanel .ftPanel{ height:10px; padding:0px 10px 0px 13px;}
+.menuBar .bodyPanel .ftPanel .leftCorner{ float:left; width:13px; height:100%; margin-left:-13px; background:url(images/desktop/menu/body/bottomleft.png);}
+.menuBar .bodyPanel .ftPanel .middle{ float:left; width:100%; height:100%; background:url(images/desktop/menu/body/bottommid.png);}
+.menuBar .bodyPanel .ftPanel .rightCorner{ float:left; width:10px; height:100%; margin-right:-10px; background:url(images/desktop/menu/body/bottomright.png);}
+/** 主菜单项区域 **/
+.functionArea{ padding:20px 0 0 0;}
+.menuItem{ position:relative;margin-top:5px;}
+.menuItem .leftPart{ float:left; width:7px; height:41px; margin-left:2px; background:url(images/desktop/menu/left_back.png);}
+.menuItem .rightPart{ float:left; width:7px; height:41px; background:url(images/desktop/menu/right_back.png);}
+.menuItem .midPart{ float:left; width:133px; height:41px; background:url(images/desktop/menu/mid_back.png);}
+.menuItem:hover{ text-decoration:none;}
+.menuItem:hover .leftPart{background:url(images/desktop/menu/left_back_hover.png);}
+.menuItem:hover .midPart{background:url(images/desktop/menu/mid_back_hover.png);}
+.menuItem:hover .rightPart{background:url(images/desktop/menu/right_back_hover.png);}
+.menuItem.ue-state-active .leftPart{ background:url(images/desktop/menu/left_back_active.png) !important;}
+.menuItem.ue-state-active .rightPart{ background:url(images/desktop/menu/right_back_active.png) !important;}
+.menuItem.ue-state-active .midPart{ background:url(images/desktop/menu/mid_back_active.png) !important;}
+/*菜单小图标*/
+.menuIcon{ float:left; width:36px; height:36px; margin:2px 0 0 2px; background:url(images/desktop/menu/menu_item.png);}
+.menuIcon.pc{ background-position:0 0;}
+.menuIcon.search{ background-position:-36px 0;}
+.menuIcon.message{ background-position:-72px 0;}
+.menuIcon.history{ background-position:108px 0;}
+.menuIcon.quit{ background-position:-144px 0;}
+.menuIcon.fence{ background-position:-180px 0;}
+/*菜单文字*/
+.menuItem .textHide{ float:left; margin:8px 0 0 5px; color:#3c3c3c; font-size:14px; font-weight:bold;}
+.menuItem.ue-state-active .textHide{ color:#FFF;}
+/*消息托底*/
+.menuItem .messageNum{ position:absolute; top:-3px; right:-3px; width:24px; height:15px; line-height:15px; background:url(images/desktop/menu/messagenum.png); color:#FFF; text-align:center;}
+/*简版的分割线*/
+.divide{ display:none; margin-top:3px; padding:0 14px 0 13px;}
+.divide .leftPart{ float:left; margin-left:-13px; background:url(images/desktop/menu/divide_left.png); width:13px; height:2px;}
+.divide .midPart{ float:left; width:100% !important; height:2px;background:url(images/desktop/menu/divide_mid.png);}
+.divide .rightPart{ float:left; width:14px; margin-right:-14px; height:2px; background:url(images/desktop/menu/divide_right.png);}
+/*简版版样式微调*/
+.miniMenu .divide{ display:block;}
+.miniMenu .midPart{ width:48px;}
+.miniMenu .menuIcon{ margin-left:5px;}
+.miniMenu .messageNum{ right:2px;}
+.miniMenu .menuItem .leftPart{background:none;}
+.miniMenu .menuItem .rightPart{background:none;}
+.miniMenu .menuItem .midPart{background:none;}
+.miniMenu .functionArea .menuItem:hover .leftPart{background:url(images/desktop/menu/left_back.png);}
+.miniMenu .functionArea .menuItem:hover .midPart{background:url(images/desktop/menu/mid_back.png);}
+.miniMenu .functionArea .menuItem:hover .rightPart{background:url(images/desktop/menu/right_back.png);}
+
+
+/** 小工具区域 **/
+.toolArea{ position:relative; padding:10px 6px 0px 7px; height:141px;}
+.toolArea .leftPart{ float:left; width:7px; height:100%; margin-left:-7px; background:url(images/desktop/menu/body/innerleft.png);}
+.toolArea .midPart{ float:left; width:100%; height:100%; background:url(images/desktop/menu/body/innermid.png);}
+.toolArea .rightPart{float:left; width:6px; height:100%; margin-right:-6px; background:url(images/desktop/menu/body/innerright.png);}
+/*小工具头部区域*/
+.toolArea .contentHd{ float:left; width:100%; height:34px;}
+.toolArea .contentHd .textHide{ float:left; line-height:34px; font-size:14px; font-weight:bold; color:#000;}
+.toolArea .contentHd .addIcon{ float:right; width:32px; height:32px; margin-top:1px; background:url(images/desktop/menu/icon_add.png);}
+/*小工具内容区域*/
+.toolArea .contentBd{ position:relative;float:left; width:138px; height:100px; overflow:hidden; padding:5px 5px 0 5px; margin-left:-6px;}
+.toolArea .contentBd .toolWrap{position:absolute; float:left; width:150px;}
+.toolArea .contentBd .toolMiniWrap{ display:none; position:absolute; float:left; width:63px;}
+.toolArea .contentBd .item{ float:left; width:46px; height:52px;}
+.toolArea .contentBd .item:hover{ text-decoration:none;}
+.toolArea .contentBd .item:hover .textHide{ color:#0074B8;}
+.toolIcon{ display:block;width:24px; height:24px; margin:0 auto; background:url(images/desktop/menu/tool_normal.png);}
+.ue-state-hover .toolIcon{ background:url(images/desktop/menu/tool_hover.png);}
+.toolIcon.plus{ background-position:0 0;}
+.toolIcon.skin{ background-position:-24px 0; margin:-2px auto 2px;}
+.toolIcon.chat{ background-position:-48px 0;}
+.toolIcon.history{ background-position:-72px 0;}
+.toolIcon.focus{ background-position:-96px 0;}
+.toolIcon.cloud{ background-position:-120px 0;}
+.toolIcon.fence{ background-position:-144px 0;}
+.toolIcon.set{ background-position:-168px 0;}
+.toolArea .contentBd .textHide{ float:left; width:100%; color:#000; text-align:center;}
+/*小工具的左右翻页*/
+.toolArea .page{ position:absolute; top:82px; float:left; width:9px; height:26px; background:url(images/desktop/menu/page_normal.png);}
+.toolArea .page:hover{ background:url(images/desktop/menu/page_hover.png);}
+.toolArea .page.disable{ background:url(images/desktop/menu/page_disable.png);}
+.toolArea .page.pageLeft{ background-position:0 0; left:-4px;}
+.toolArea .page.pageRight{ background-position:-9px 0; right:-4px;}
+/*简版版样式微调*/
+.miniMenu .toolArea .contentBd{ width:55px; overflow:hidden; }
+.miniMenu .toolArea .contentBd .item{ width:54px; height:35px;}
+.miniMenu .toolArea .toolWrap{ display:none;}
+.miniMenu .toolArea .toolMiniWrap{ display:block;}
+.miniMenu .toolArea .addIcon{ margin-right:12px;}
+/** 切屏按钮区域 **/
+.switchPanel{ width:100%; height:40px;}
+.switchPanel .midPanel{ float:left; width:65px; height:100%; background:url(images/desktop/menu/switch/mid_black.png);}
+.miniMenu .switchPanel .midPanel{ width:23px;}
+.switchPanel .leftPanelItem,.switchPanel .rightPanelItem{ float:left; height:100%; cursor:pointer;}
+.switchPanel .leftPanelItem .leftPanel{ float:left; width:9px; height:100%; background:url(images/desktop/menu/switch/left_black.png);}
+.switchPanel .leftPanelItem .rightPanel{float:left; width:9px; height:100%; background:url(images/desktop/menu/switch/mid_black.png);}
+.switchPanel .rightPanelItem .rightPanel{ float:left; width:7px; height:100%; background:url(images/desktop/menu/switch/right_black.png);}
+.switchPanel .rightPanelItem .leftPanel{float:left; width:9px; height:100%; background:url(images/desktop/menu/switch/mid_black.png);}
+.switchPanel .leftPanelItem:hover .leftPanel{ background:url(images/desktop/menu/switch/left_black_hover.png);}
+.switchPanel .leftPanelItem:hover .rightPanel{ background:url(images/desktop/menu/switch/mid_black_hover.png);}
+.switchPanel .rightPanelItem:hover .rightPanel{ background:url(images/desktop/menu/switch/right_black_hover.png);}
+.switchPanel .rightPanelItem:hover .leftPanel{ background:url(images/desktop/menu/switch/mid_black_hover.png);}
+.switchPanel .panelItem:hover .midPanel{ background:url(images/desktop/menu/switch/mid_black_hover.png);}
+/*激活状态*/
+.switchPanel .ue-state-active{ cursor:default;}
+.switchPanel .leftPanelItem.ue-state-active .rightPanel{background:url(images/desktop/menu/switch/mid_blue.png) !important;}
+.switchPanel .rightPanelItem.ue-state-active .leftPanel{background:url(images/desktop/menu/switch/mid_blue.png) !important;}
+.switchPanel .ue-state-active .midPanel{ background:url(images/desktop/menu/switch/mid_blue.png) !important;}
+.switchPanel .ue-state-active .leftPanel{ background:url(images/desktop/menu/switch/left_blue.png) !important;}
+.switchPanel .ue-state-active .rightPanel{ background:url(images/desktop/menu/switch/right_blue.png) !important;}
+/**眼睛**/
+.historyEye{ display:block; width:49px; height:71px; margin:5px 0 0 102px; background:url(images/desktop/history/eye_normal.png);}
+.historyEye.closeEye{ background:url(images/desktop/history/eye_normal02.png);}
+.historyEye:hover{ background:url(images/desktop/history/eye_hover.png);}
+.miniMenu .historyEye{ margin-left:15px;}
+/*功能图标*/
+.iconScreen{ display:block; width:23px; height:20px; margin:10px auto 0; background:url(images/desktop/menu/switch/screen_normal.png);}
+.ue-state-active .iconScreen{ background:url(images/desktop/menu/switch/screen_active.png);}
+.iconScreen.screenHome{ background-position:0 0;}
+.iconScreen.screenMenu{ background-position:-23px 0;}
+/***** 栅栏区域 *****/
+.fenceGroup{ position:absolute; top:80px; right:10px;z-index:10;}
+.fenceGroup .fence{ position:absolute; margin-bottom:20px; width:231px;}
+.fence .contentHd{ float:left; width:100%; height:31px; background:url(images/desktop/menu/fence/content_hd.png)}
+.fence .contentHd input[type=text]{  float:left; border:none; height:18px; width:150px; margin:6px 0 0 4px; background:none; color:#fFF;}
+.fence .contentHd .title{float:left; margin:5px 0 0 10px; font-weight:bold; color:#FFF;}
+.fence .contentHd .opGroup{ float:right; margin:8px 10px 0 0;}
+.fence .contentHd .opGroup a{ margin-left:-4px;*margin-left:-1px;}
+.fence .contentBd{ float:left; width:100%; min-height:100px; background:url(images/desktop/menu/fence/content_bd.png); overflow:hidden;}
+.fence .contentBd .item{ float:left; width:82px;}
+.fence .contentBd .item img{ display:block; width:64px; margin:0 auto;}
+.fence .contentBd .item .text{ float:left; width:100%; margin-top:-10px; color:#FFF; text-align:center;}
+.fence .contentBd i{ display:block; margin:40px 0; text-align:center; color:#668083;}
+.fence .contentFt{ float:left; width:100%; height:7px; background:url(images/desktop/menu/fence/content_ft.png)}
+.fence .fence-icon{ position:relative;float:left;width:72px;height:75px;padding:5px 1px 5px 3px;z-index:10;}
+.fence-icon .iconClosetype1{display:none;position:absolute;top:5px;right:2px;cursor:pointer;z-index:2;}
+.fence-icon .back{display:none;position:absolute;top:5px;left:2px;cursor:pointer;z-index:2;}
+.fence-icon-hd,.fence-icon-ft{height:5px;}
+.fence-icon-bd{max-height:85px;text-align:center;overflow:hidden;}
+.fence-icon-bd .text{ margin-top:-2px;*margin-top:0px;color:#fff;cursor:default;}
+.fence .fence-icon:hover{ text-decoration:none;}
+.fence .fence-icon:hover .fence-icon-hd{background:url(images/desktop/menu/fence/fence_icon_top.png) no-repeat left top;}
+.fence .fence-icon:hover .fence-icon-bd{background:url(images/desktop/menu/fence/fence_icon_center.png) repeat-y left top;}
+.fence .fence-icon:hover .fence-icon-ft{background:url(images/desktop/menu/fence/fence_icon_bottom.png) no-repeat left top;}
+.fence-icon:hover .icon,.fence-icon.ue-state-active .icon{ display:inline-block;}
+.fence .fence-icon.ue-state-active .fence-icon-hd{background:url(images/desktop/menu/fence/fence_icon_top_current.png) no-repeat left top;}
+.fence .fence-icon.ue-state-active .fence-icon-bd{background:url(images/desktop/menu/fence/fence_icon_center_current.png) repeat-y left top;}
+.fence .fence-icon.ue-state-active .fence-icon-ft{background:url(images/desktop/menu/fence/fence_icon_bottom_current.png) no-repeat left top;}
+/****** 桌面图标样式 ******/
+/*桌面快捷方式*/
+.shortcutTray{position:absolute;top:77px;left:200px;right:10px;z-index:9;}
+.shortcutTray.miniShortcut{ left:115px;}
+.shortcutTray .addItem{ position:absolute;}
+.shortcutTray .addItem:hover{ cursor:pointer;}
+.shortcutTray .addItem .addIcon{ width:64px; height:64px; background:url(images/desktop/bd/ico_add.png);}
+.shortcutTray .addItem .addIcon:hover{ background:url(images/desktop/bd/ico_add_hover.png)}
+.shortcutTray .addItem .text{ margin-top:2px; text-align:center; color:#FFF;}
+/*快捷小图标*/
+.desk-icon{position:absolute;width:95px;height:90px;padding:10px;z-index:10;}
+.desk-icon.drag{ z-index:11;}
+.desk-icon .icon{display:none;position:absolute;right:10px;cursor:pointer;z-index:2;}
+.desk-icon-hd,.desk-icon-ft{height:5px;}
+.desk-icon-bd{max-height:85px;text-align:center;overflow:hidden;}
+.desk-icon-bd .text{color:#fff;cursor:default;}
+
+.desk-icon:hover .desk-icon-hd{background:url(images/desktop/bd/desk_icon_top.png) no-repeat left top;}
+.desk-icon:hover .desk-icon-bd{background:url(images/desktop/bd/desk_icon_center.png) repeat-y left top;}
+.desk-icon:hover .desk-icon-ft{background:url(images/desktop/bd/desk_icon_bottom.png) no-repeat left top;}
+.desk-icon:hover .icon,.desk-icon.ue-state-active .icon{ display:inline-block;}
+.desk-icon.ue-state-active{z-index:11;}
+.desk-icon.ue-state-active .desk-icon-hd{background:url(images/desktop/bd/desk_icon_top_current.png) no-repeat left top;}
+.desk-icon.ue-state-active .desk-icon-bd{max-height:1150px;background:url(images/desktop/bd/desk_icon_center_current.png) repeat-y left top;}
+.desk-icon.ue-state-active .desk-icon-ft{background:url(images/desktop/bd/desk_icon_bottom_current.png) no-repeat left top;}
+/*图标文字提示*/
+.titleTip{ display:none; position:absolute; top:0px; left:0px; z-index:16;}
+.titleTip .tipLeft{ float:left; background:url(images/desktop/bd/title/left.png); width:7px; height:30px;}
+.titleTip .tipCenter{ float:left; background:url(images/desktop/bd/title/center.png);height:30px;}
+.titleTip .tipRight{ float:left; background:url(images/desktop/bd/title/right.png);width:7px;height:30px;}
+
+/********** frames的内部区域 **********/
+.frames{ position:absolute; top:10px; left:200px; right:5px; height:600px; z-index:13;}
+.frames.miniFrame{ left:115px;}
+/****** 小工具选择 ******/
+.toolChoose{ display:none; position:absolute; top:300px; left:190px; width:323px; z-index:14;}
+.toolChoose.miniToolChoose{ left:105px;}
+.toolChoose .contentHd{ float:left; width:100%; height:33px; background:url(images/desktop/tool/toolchoose_top.png);}
+.toolChoose .contentHd .title{ float:left; margin:7px 0 0 15px; color:#000; font-weight:bold;}
+.toolChoose .contentHd .closeWindow{ float:right; margin:6px 10px 0 0;}
+.toolChoose .contentBd{ float:left; width:100%; padding:5px 0 12px; background:url(images/desktop/tool/toolchoose_mid.png);}
+.toolChoose .contentBd .itemPanel{ position:relative; float:left; width:59px; height:59px; margin:10px 2px 0 15px; background:url(images/desktop/tool/toolchoose_panel.png);}
+.toolChoose .contentBd .itemPanel:hover{ cursor:pointer;}
+.toolChoose .contentBd .itemPanel .toolIcon{ margin-top:10px;}
+.toolChoose .contentBd .itemPanel .text{ margin-top:2px; text-align:center;}
+.toolChoose .contentBd .itemPanel.ue-state-hover .text{ color:#0074B8;}
+.toolChoose .contentBd .ico{ position:absolute; top:-5px; right:-6px;}
+.toolChoose .contentFt{ float:left; width:100%; height:23px; background:url(images/desktop/tool/toolchoose_bottom.png);}
+/****** 历史弹出层选择 ******/
+.historyCut{ display:none; position:absolute;top:30px;left:200px; width:772px; height:558px; background:url(images/desktop/history/history_list_bg.png); z-index:999;}
+.historyCut.miniHistoryCut{ left:115px;}
+/*历史弹出层的遮罩*/
+.historyLayout{ display:none; position:fixed; top:0px; left:0px; right:0px; bottom:0px; background:#000; opacity:0.7;filter:alpha(opacity:70); z-index:999;}
+.historyArrow{ position:absolute; left:-34px; bottom:31px; width:36px; height:29px; background:url(images/desktop/history/history_list_arrow.png);}
+.historyCut .contentHd .title{ font-weight:bold; text-align:center; height:33px; line-height:33px;}
+.historyCut .contentHd .closeWindow{ position:absolute; top:7px; right:10px;}
+.historyCut .contentBd{ padding:16px 70px 0 70px;}
+.historyCut .contentBd dl{ padding-top:15px;}
+.historyCut .contentBd dl dt{ float:left; width:100%; margin-bottom:10px; background:url(images/desktop/history/line.gif) center left repeat-x;}
+.historyCut .contentBd dl dt .title{ background:#FFF; color:#000000; font-weight:bold;}
+.historyCut .contentBd dl dd{ float:left; width:100%;}
+/*最近打开的页面*/
+.historyCut .shortCutWrap{ position:relative; height:420px; overflow-y:auto;}
+.historyCut .shortcut{}
+.historyCut .shortcut li{ float:left; width:185px; height:120px; margin:0 10px 35px 0px;padding:4px; border:1px solid #D5D5D5; border-radius:5px;}
+.historyCut .shortcut li:hover{ cursor:pointer;border:1px solid #2C97D5;}
+.historyCut .shortcut .imgWrap{ float:left; width:100%; height:100%; background:#E6E6E6 url(images/no_page_thumb.png) no-repeat center center;}
+.historyCut .shortcut .imgWrap .page-thumb{ display:block; float:left; width:100%; height:100%;}
+.historyCut .shortcut .title{ position:relative; float:left; width:100%; margin-top:10px; }
+.historyCut .shortcut .ico{ float:left; position:absolute; top:0px;left:0px;}
+.historyCut .shortcut .text{ float:left;width:100%; text-indent:20px;overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+
+/*翻页*/
+.historyCut .Page{width:70px; height:300px;}
+.historyCut .Page:hover{ background:#F1F1F1;}
+.historyCut .leftPage{ position:absolute; top:93px; left:2px;}
+.historyCut .leftPage .arrow{ margin:124px 0 0 30px; display:inline-block; width:10px; height:18px; background:url(images/desktop/history/jt.png);}
+.historyCut .rightPage{ position:absolute; top:93px; right:4px;}
+.historyCut .rightPage .arrow{ margin:124px 0 0 30px;  display:inline-block; width:10px; height:18px; background:url(images/desktop/history/jt.png) -10px 0;}
+/*最近关闭的列表*/
+.historyCut .closeList li{ float:left; margin:5px 0 0 10px;}
+.historyCut .closeList li a{float:left;}
+.historyCut .closeList li a:hover{ text-decoration:none;}
+.historyCut .closeList li a .ico{ float:left;}
+.historyCut .closeList li a .text{ float:left;width:152px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;  }
+/****** 内页 ******/
+/*** 九宫格布局 ***/
+.frames .contentHd{height:29px; padding:0px 5px 0px 5px;}
+.frames .contentHd .leftCorner{ float:left; width:5px; height:100%; margin-left:-5px; background:url(images/desktop/frame/top_left.png);}
+.frames .contentHd .midPart{ float:left; width:100%; height:100%; background:url(images/desktop/frame/top_mid.png);}
+.frames .contentHd .rightCorner{ float:left; width:5px; height:100%; margin-right:-5px; background:url(images/desktop/frame/top_right.png);}
+.frames .contentBd{height:315px; padding:0px 5px 0px 5px;}
+.frames .contentBd .leftCorner{ float:left; width:5px; height:100%; margin-left:-5px; background:url(images/desktop/frame/mid_left.png);}
+.frames .contentBd .midPart{ float:left; width:100%; height:100%; background:url(images/desktop/frame/mid_mid.png);}
+.frames .contentBd .rightCorner{ float:left; width:5px; height:100%; margin-right:-5px; background:url(images/desktop/frame/mid_right.png) top right;}
+.frames .contentFt{ height:5px; padding:0px 5px 0px 5px;}
+.frames .contentFt .leftCorner{ float:left; width:5px; height:100%; margin-left:-5px; background:url(images/desktop/frame/bottom_left.png);}
+.frames .contentFt .midPart{ float:left; width:100%; height:100%; background:url(images/desktop/frame/bottom_mid.png);}
+.frames .contentFt .rightCorner{ float:left; width:5px; height:100%; margin-right:-5px; background:url(images/desktop/frame/bottom_right.png);}
+/*** 头部操作 ***/
+.frames .title_icon{ position:absolute; top:5px; }
+.frames .home{left:10px;}
+.frames .refresh{left:10px;}
+.frames .min{ right:33px;}
+.frames .closeWindow{ right:10px;}
+.frames .contentHd .title{ text-align:center; line-height:33px; font-weight:bold;}
+/*底部logo部分*/
+.logo_bottom{ position:absolute;bottom:20px; right:20px; width:400px; height:91px; background:url(images/desktop/logo_bottom.png);}
+

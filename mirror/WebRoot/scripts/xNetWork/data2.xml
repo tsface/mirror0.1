@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<network>
+	<node id="nmjl" label="南木金陵" desc="" icon="images/faces/南木金陵.jpg"/>
+	<node id="njfhxk" label="南京烽火星空" desc="" icon="images/faces/南京烽火星空.jpg"/>
+	<node id="xs" label="曦署" desc="" icon="images/faces/曦署.jpg"/>
+	<node id="wys" label="王永山" desc="" icon="images/faces/王永山.jpg"/>
+	<node id="gggs" label="高高高树" desc="" icon="images/faces/高高高树.jpg"/>
+	<node id="yk" label="杨昆" desc="" icon="images/faces/杨昆.jpg"/>
+
+	<link from="yk" to="nmjl" label="yk→nmjl" orient="2"/>
+	<link from="yk" to="njfhxk" label="yk→njfhxk" orient="2"/>
+	<link from="yk" to="xs" label="yk→xs" orient="2"/>
+	<link from="yk" to="wys" label="yk→wys" orient="2"/>
+	<link from="yk" to="gggs" label="yk→gggs" orient="2"/>
+	<link from="wys" to="gggs" label="wys→gggs" orient="2"/>
+	
+</network>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Flash头像上传组件演示</title>
+    <script type="text/javascript" src="swfobject.js"></script>
+  </head>
+  
+  <body>
+    <div id="avatarPanel">
+    	<div id="avatarContent"></div>
+    </div>
+  </body>
+  <script type="text/javascript">
+    <!-- For version detection, set to min. required Flash Player version, or 0 (or 0.0.0), for no version detection. -->
+    var swfVersionStr = "10.2.0";
+    var xiSwfUrlStr = "";
+    var flashvars = {};
+    var params = {};
+    params.quality = "high";
+    params.bgcolor = "#ffffff";
+    params.allowscriptaccess = "all";//"sameDomain";
+    params.allowfullscreen = "true";
+    params.wmode="Transparent";
+
+    var attributes = {};
+    attributes.id = "Avatar";
+    attributes.name = "Avatar";
+    attributes.align = "left";
+    // upload_url -- 接收上传的3张Base64加密图片数据程序URL(该URL只能传递一个额外参数到后台，例如：userid=12002)，该程序负责生成图片并响应前台：输出 {state:1|0}
+    // header_pic_url -- 默认头像上传管理器右侧3张区域显示的头像，该值为180x180的图片路径，例如：http://127.0.0.1:8080/avatar/large.png
+    swfobject.embedSWF(
+    "avatar.swf?x=1&upload_url=avatar_upload.jsp?userid=12002&action=upload_face&isexists=true&header_pic_url=", "avatarContent",
+    "750", "516",
+    swfVersionStr, xiSwfUrlStr,
+    flashvars, params, attributes);
+    swfobject.createCSS("#avatarContent", "display:block;text-align:left;");
+</script>
+
+<script type="text/javascript">
+	// 头像上传flash组件内置的回调函数，用于处理上传服务器的处理响应。
+    var ASFace = (function(){
+        return {
+        	//成功连接服务端并返回数据后调用此方法: res is a object {state:1|0, other....}
+            result: function(res){  
+                if(res.state){
+                	alert("头像上传成功!");
+                }else{
+                    alert("头像上传失败!");
+                }
+            },
+            // 连接服务异常回调
+            fault: function(obj){
+                alert("Error:"+obj.message+"\n连接服务器失败!");
+            }
+        }
+    })();
+
+</script>
+</html>

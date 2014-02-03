@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>qTip2 - Pretty powerful tooltips - Demo - Speech bubble tips</title>
+
+<!--Stylesheets-->
+
+<link rel="stylesheet" type="text/css" href="../jquery.qtip.min.css" />
+<link rel="stylesheet" type="text/css" href="css/demos.css" />
+
+<!--JavaScript - Might want to move these to the footer of the page to prevent blocking-->
+<script type="text/javascript" src="../../jquery.js"></script>
+
+<script type="text/javascript" src="../jquery.qtip.min.js"></script>
+</head>
+<body class="demo-tips">
+
+<div id="content" class="preview">
+   
+<div id="demo-tips">
+	<div class="structure">&nbsp;</div>
+</div>
+
+<script class="example" type="text/javascript">
+// Define our positioning and style arrays
+var at = [
+		'bottom left', 'bottom right', 'bottom center',
+		'top left', 'top right', 'top center',
+		'left center', 'left top', 'left bottom',
+		'right center', 'right top', 'right bottom', 'center'
+	],
+	my = [
+		'top left', 'top right', 'top center',
+		'bottom left', 'bottom right', 'bottom center',
+		'right center', 'right top', 'right bottom',
+		'left center', 'left top', 'left bottom', 'center'
+	],
+	styles = [
+		'red', 'blue', 'dark', 'light', 'green', 'jtools', 'youtube', 'plain', 'cluetip', 'tipsy', 'tipped', 'bootstrap'
+	];
+
+// Create the tooltips only on document load
+$(document).ready(function()
+{
+	// Loop through the my array
+	for(var i = 0; i < my.length; i++)
+	{
+		$('.structure')
+			/*
+			 * Lets delete the qTip data from our target element so we can apply multiple tooltips.
+			 * Since the data is also stored on the tooltip element itself this isn't a problem!
+			 * 
+			 * Check here for more details on this: http://craigsworks.com/projects/qtip2/tutorials/advanced/#multi
+			 */
+			.removeData('qtip') 
+			.qtip({
+				content: {
+					text: 'At its ' + at[i], 
+					title: {
+						text: 'My ' + my[i],
+						button: true
+					}
+				},
+				position: {
+					my: my[i], // Use the corner...
+					at: at[i] // ...and opposite corner
+				},
+				show: {
+					event: false, // Don't specify a show event...
+					ready: true // ... but show the tooltip when ready
+				},
+				hide: false, // Don't specify a hide event either!
+				style: {
+					classes: 'qtip-shadow qtip-' + styles[i]
+				}
+			});
+	}
+});
+</script>
+
+
+</div>
+</body>
+</html>

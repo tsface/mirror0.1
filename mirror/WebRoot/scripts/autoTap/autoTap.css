@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+.auto-tap {position: absolute;display: none;z-index: 99999; min-width: 300px;top: 0px;left: 0px;}
+.auto-tap-panel {overflow: auto; border-style: solid; border-width: 1px; border-color: #BEBEBE #E4E4E4 #BEBEBE #BEBEBE; z-index: 1; background-color: white;  }
+.auto-tap-panel li {font-size:13px; height: 24px; padding: 0 5px; line-height: 24px; cursor: default; border: 1px solid white;}
+.auto-tap-panel .hover{ background: #E6F2FA;} 
+.auto-tap-panel li span{float: left;}
+.auto-tap-panel li i{font-style: normal; float: right;}
+.auto-tap-panel .auto-tap-pager{  font-size:13px; padding: 5px 0 6px 5px; background-color:#F2F2F2; border-top: 1px solid #BEBEBE; }
+.inline-a {display:inline-block;vertical-align:top;}
+.auto-tap-pager .prev,.auto-tap-pager .next{width:15px; height: 13px;cursor: pointer;  background:url(img/prev_15x13.png) no-repeat 0 0;}
+.auto-tap-pager .next{ background:url(img/next_15x13.png) no-repeat 0 0;}
+
+.auto-tap-nodata{width: 170px; height: 48px; line-height: 48px; background: url(img/nodata_normal.png) no-repeat left center; text-indent: 50px; font-size: 15px; color: #D4D4D4; margin: 0 auto;margin-top: 30px;}

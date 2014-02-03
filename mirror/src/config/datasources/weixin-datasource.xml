@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://gdk.com/db" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://gdk.com/db/gdk-db-2.0.xsd">
+
+	<constants>
+		<constant name="max-connection-size" value="5"/>
+		<constant name="min-connection-size" value="2"/>
+		<constant name="init-connection-size" value="2"/>
+		<constant name="available-connection-size" value="2"/>
+		<constant name="acquire-increment-size" value="2"/>
+		<constant name="show-sql" value="false"/>
+		<constant name="load-on-startup" value="true"/>
+		<!--
+		<constant name="connection-provider" value="com.nebula.core.DruidConnectionProvider"/>
+		-->
+		<constant name="connection-provider" value="com.avatar.db.connection.c3p0.C3P0ConnectionProvider"/>
+	</constants>
+ 
+	<datasource>
+		<!-- 10.1.116.1 -->
+		<name>weixin</name>
+    	<driver-class>com.mysql.jdbc.Driver</driver-class>
+    	<driver-url>jdbc:mysql://r.rdc.sae.sina.com.cn:3307/app_tsface</driver-url>
+    	<user>wm3nnjn3w2</user>
+    	<password>5khjl3yzlh4iix2550h0l0y0h5y31hk5yyy15kiy</password>
+	</datasource> 
+	
+</datasources>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <style type="text/css">
+    	html,body{margin:0;padding:0;font-size:13px;}
+    	#tip{position:absolute;left:-100px;top:-100px; border:1px solid #b99400;text-align:left;background-color:#FFFFE1; padding:0.5em;border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;z-index:10;}
+    </style>
+	
+	<script type="text/javascript" src="../jquery.js"></script>
+	<script type="text/javascript" src="raphael-min.js"></script>
+	<script type="text/javascript" src="ChinaMap.js"></script>
+	<script type="text/javascript" src="crm-app.js"></script>
+	
+  </head>
+  
+  <body>
+    <div id="china_map"></div>
+    <div id="tip" style=""></div>
+  </body>
+  <script type="text/javascript">
+  	$(function(){
+  		var hoverTimer = null;
+  		var chinaMap = new ChinaMap("china_map", {
+  			"width":850,
+  			"height":700,
+  			"fillcolor":"#f5f5f5",
+  			"strokecolor":"#666666",
+  			"strokewidth":0.5,
+  			"click":function(e, path, data){
+  				alert(data.code+"\n"+ data.name+"\n"+ data.count);
+  			},
+  			"mouseover":function(e, path, data){
+  				if(hoverTimer){
+  					window.clearTimeout(hoverTimer);
+  					hoverTimer = null;
+  				}
+  				
+  				hoverTimer = window.setTimeout(function(){
+  					$("#tip").html(data.title+"["+data.code+"]").css({"left":e.pageX, "top":e.pageY}).show();
+  				}, 200);
+  			},
+  			"mouseout":function(e, path, data){
+  				if(hoverTimer){
+  					window.clearTimeout(hoverTimer);
+  					hoverTimer = null;
+  				}
+  				$("#tip").hide();
+  			}
+  		});
+  		
+  		chinaMap.redraw({"320000":{count:32, "title":"问题(12), 任务(20)"}, "340000":{count:3, "title":"问题(1), 任务(2)"}});
+  	});
+  </script>
+</html>

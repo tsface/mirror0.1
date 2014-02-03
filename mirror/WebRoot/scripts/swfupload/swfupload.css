@@ -1,0 +1,95 @@
+
+.swfupload{
+	float:left;
+}
+
+.upload-warpper,
+.file-ul {
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.file-ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+.file-ul li {
+	width: 100%;
+}
+
+.file-status {
+	text-align: left;
+	margin-left: 5px;
+	white-space: nowrap;
+	color: gray;
+}
+
+
+.file-div {
+	padding: 2px 5px 2px 28px;
+	line-height: 19px;
+	overflow: hidden;
+}
+
+.file-upload-queue{
+	background: url(images/file-upload-queue.gif) no-repeat 2px 50%;
+}
+
+.file-upload-start{
+	background: url(images/file-upload-progress.gif) no-repeat 2px 50% ;
+}
+
+.file-upload-success{
+	background: url(images/file-upload-success.gif) no-repeat 2px 50%;
+}
+
+.file-upload-error{
+	background: url(images/file-upload-error.gif) no-repeat 2px 50%;
+}
+
+.file-div .file-v {
+	margin-left: 5px;
+	display: inline-block;
+}
+
+.file-v{
+}
+
+.file-div a {
+	margin-left: 5px;
+	white-space: nowrap;
+}
+
+.file-probar {
+	position: relative;
+	width: 60px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	background-color: #fff;
+	padding: 1px;
+}
+
+.file-probar div{
+	height: 10px;
+	background-color: #2fb024;
+	background:url(images/prbg.gif) repeat-x 0 center;
+	display: block;
+	position: relative;
+	line-height: 10px;
+}
+
+.file-probar span{
+	position: absolute; 
+	left: 5px; 
+	width: 50px;
+	-webkit-text-size-adjust:none;
+	font-size: 11px;
+	text-align: center;
+}
+
+.file-info {
+	overflow: hidden;
+}

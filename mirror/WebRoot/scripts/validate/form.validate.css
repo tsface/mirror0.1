@@ -1,0 +1,69 @@
+/* form validate */
+input.fv-error, textarea.fv-error, select.fv-error{
+    border:1px solid #ea5200;
+}
+label.fv-error{
+    width:16px;
+    height:18px;
+    margin-left:2px; 
+    background:url(images/err.png) no-repeat scroll 0 0 transparent;
+    display:inline-block;
+    *display:inine;
+    *zoom:1;
+    vertical-align:middle;
+}
+.form-validate-tip{
+    position:absolute;
+    left:-1000px;
+    top:-100px;
+    border:0px solid #ccc;
+    white-space:nowrap;
+    zoom:1;
+    z-index:999;
+    display:none;
+}
+.fv-tip-l{
+    position:relative;
+    float:left;
+    left:0px;
+    top:6px;
+    width:10px;
+    height:32px;
+    background:url(images/form-tip.gif) no-repeat left top;
+    z-index:1;
+    display:block;
+}
+.fv-tip-r{
+    position:relative;
+    float:left;
+    top:6px;
+    width:auto;
+    height:32px;
+    line-height:32px;
+    text-align:center;
+    color:#EA5200;
+    padding:0px 8px 0px 0px;
+    font-weight:bold;
+    white-space:nowrap;
+    font-size:13px;
+    background:url(images/form-tip.gif) no-repeat right top;
+    z-index:1;
+    display:block;
+    overflow:hidden;
+}
+.fv-tip-coner{
+    position:absolute;
+    top:0px;
+    width:11px;
+    height:9px;
+    font-size:1px;
+    z-index:2;
+}
+.form-validate-tip.tip-left .fv-tip-coner{
+    left:10px;
+    background:url(images/tip-coner.gif) no-repeat 0 0;
+}
+.form-validate-tip.tip-right .fv-tip-coner{
+    right:10px;
+    background:url(images/tip-coner.gif) no-repeat 0 -10px;
+}

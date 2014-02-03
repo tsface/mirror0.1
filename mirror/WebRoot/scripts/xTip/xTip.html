@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+
+		<link rel="stylesheet" type="text/css" href="xTip.css" />
+
+		<script type="text/javascript" src="../../scripts/jquery.js"></script>
+		<script type="text/javascript" src="xTip.js"></script>
+
+	</head>
+
+	<body>
+	<div style="margin:0 0 0 50px;">	
+		<input type="button" id="btn" class='123' value="左上角"/>
+	</div>
+	<div style="margin-top:0; float: right;">	
+		<input type="button" id="btn" class='123' value="有上角"/>
+	</div>
+	<div style="margin:150px 0 0 50px;">	
+		<input type="button" id="btn" class='123' value="hover事件显示"/>
+		<input type="button" id="open" value="点击打开"/>
+		<input type="button" id="close" value="点击关闭"/>
+	</div>
+	<div id="tip" style="font-size: 12px;">这是个提示信息<br/>这是个提示信息,这是个提示信息,这是个提示信息,这是个提示信息</div>
+	</body>
+		<script type="text/javascript">
+			$("#tip").xTip({
+				type:"normalTip",
+				location:[$("#btn").position().left,$("#btn").position().top], 
+				autoOpen:false
+			});
+
+			//悬停
+			$(".123").hover(function(){
+				var obj = $(this);
+				$("#tip").xTip("location",[obj.offset().left, obj.offset().top]);
+				$("#tip").xTip("open");
+			},function(){
+				$("#tip").xTip("close");
+		   });
+
+			
+			//打开
+			$("#open").click(function(){
+				var obj = $(this);
+				$("#tip").xTip("location",[obj.offset().left, obj.offset().top]);
+				$("#tip").xTip("open");	
+			});
+
+			//关闭
+			$("#close").click(function(){
+				var obj = $(this);
+				$("#tip").xTip("location",[obj.offset().left, obj.offset().top]);
+				$("#tip").xTip("close");	
+			});
+		   	   
+		</script>
+</html>

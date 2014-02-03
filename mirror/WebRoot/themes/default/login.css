@@ -1,0 +1,34 @@
+html,body {height: 100%; overflow: hidden;}
+body {background:url(images/desktop_bg.png) center center no-repeat;}
+#container{margin:0px;  min-height:500px; min-width:1000px;}
+
+.plat{ position:relative; width:880px; height:485px; margin:0 auto;}
+.plat .line{ position:absolute; top:0px; left:275px; width:1px; height:500px; background:url(images/login/line.png) repeat-y 0 0;}
+.plat .ad{ position:absolute; top:5px; left: -154px;width: 424px; height:415px; background:url(images/login/leftbg.png);}
+.plat .square{ position:absolute; top: 60px;left: 156px;  width:574px; height:384px; background:url(images/login/square.png);}
+.plat .logo{ position:absolute; top:0px; left:325px;  width:417px; height:112px; background:url(images/login/logo.png);}
+.plat .inputs{ position:absolute; top:114px; left:360px; padding:0;  width:364px; height:207px; background:url(images/login/bg.png); z-index:2;}
+.plat .ft{ position:absolute; bottom:114px; left:100px;  width:901px; height:344px; background:url(images/login/bottom.png);color:#F1F3FE; text-align:center; line-height:584px;}
+
+#login-input-box {width: 226px; margin-top:33px; margin-left: auto; margin-right: auto; margin-bottom: 40px;}
+.login-field { border: 1px solid #fff !important; background-color: #fff; padding: 8px 6px 6px 6px !important; width:210px; font-size: 16px !important; font-weight:bold; color:#3f3f3f; outline: none; }
+.login-field:focus {box-shadow:none !important;}
+.form-item {margin-bottom: 18px;}
+/*
+.form-item label {float:left; width: 40px; font-size: 14px; font-weight: bold; text-align: left; color:#3C3C3C;}
+*/
+.login-btn {float:left; width: 93px; height: 36px; letter-spacing: 5px; color: #fff; font-size:14px; font-weight: bold; border: 0 none; background: url(images/login/login_btn.png) no-repeat 0 0;  border-radius:0;}
+.login-btn.btn-active {background-position: 0 -36px;}
+.reme-checkbox {float:right; height: 16px; line-height:16px; margin-top: 10px; color:#3C3C3C; background: url(images/login/reme_checkbox.png) no-repeat 0 0; padding-left: 20px;}
+.reme-checkbox.remed {background-position:0 -16px;}
+#login-tip-msg {margin: 0 9px;color:#fff; line-height: 34px; background:url('images/login/tsbg.png') 0 0; padding: 5px 0;}
+#login-tip-msg > li {padding-left: 20px; padding-top: 5px; padding-bottom: 5px; line-height: 1.2em; background:url(images/login/ts.png) no-repeat 9px 50%;}
+
+#browserSvgTip {margin: 9px 9px;color:#fff; line-height: 34px; background: url('images/login/svg_tip_bg.png') 0 0; padding: 5px 0; display: none;}
+#browserSvgTip > li {padding-left: 20px; padding-top: 5px; padding-bottom: 5px; line-height: 1.2em; background:url(images/login/ts.png) no-repeat 9px 50%;}}
+#browserSvgTip a:LINK {}
+#browserSvgTip a:VISITED {color: white;}
+#browserSvgTip a:HOVER {text-decoration: underline; font-weight: bold;}
+#browserSvgTip a:ACTIVE {}
+
+#processing-tip { width: 242px; padding: 50px 0 0 0; text-align:center; color: #206800;}

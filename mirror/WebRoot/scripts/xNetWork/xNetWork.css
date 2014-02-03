@@ -1,0 +1,14 @@
+/* 关系图背景颜色 */
+.xnw-bg { fill: #fff; }
+
+/* 节点 */
+.node {cursor: pointer;}
+.node .node-label { fill: #666; }
+.node .node-icon {}
+
+/* 连接线 */
+.edge {}
+.edge .link {}
+.edge .link-label {}
+.edge .link-label-text{ fill: #999; cursor: pointer; }
+

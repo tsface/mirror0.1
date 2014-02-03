@@ -1,0 +1,125 @@
+/* header tab */
+.reload{
+    width:16px;
+    height:16px;
+    display:block;
+    float:left;
+    background:url(images/headeritab/reload.png) no-repeat 0 0;
+    margin-right:5px;
+}
+.tab-panel{
+    padding-top:5px;
+    background:#fff url(images/headeritab/tab_shadow_bg.png) repeat-x 0 0;
+    position:relative;
+    z-index:1;
+}
+.tab-main{
+    position:relative;
+    height:22px;
+    background:url(images/headeritab/tab_bg.gif) repeat-x 0 0;
+}
+.header-itab{
+    padding:0;
+    background:none;
+}
+.header-itab .itab-toolbar{
+    margin-left:0;
+}
+.header-itab .itab-toolbar a{
+    float:left;
+    text-decoration:none;
+    zoom:1;
+}
+.header-itab .itab-list{
+    padding-left:20px;
+}
+.header-itab .itab-i{
+    margin-left:-18px;
+}
+.header-itab .itab-lt,
+.header-itab .itab-rb,
+.header-itab .itab-cm{
+    height:22px;
+    background-image:url(images/headeritab/hd_tab_sprite.png);
+    border:0 none;
+}
+.header-itab .itab-lt{
+    padding-left:10px;
+    background-position:0 -66px;
+}
+.header-itab .itab-rb{
+    padding-right:10px;
+    background-position:right -88px;
+}
+.header-itab .itab-cm{
+    background-position:0 -110px;
+    background-repeat:repeat-x;
+}
+.header-itab .itab-active{
+    border:0 none;
+    background-color:transparent;
+}
+.header-itab .itab-active .itab-txt{
+    color:#3f516e;
+}
+.header-itab .itab-active .itab-lt{
+    background-position:0 0px;
+}
+.header-itab .itab-active .itab-rb{
+    /*padding-right:8px;*/
+    background-position:right -22px;
+}
+.header-itab .itab-active .itab-cm{
+    background-position:0 -44px;
+    background-repeat:repeat-x;
+}
+.header-itab .itab-label{
+    height:22px;
+    line-height:22px;
+    padding:0 12px;
+}
+.header-itab .itab-active .itab-label{
+    padding-left:12px;
+}
+.header-itab .itab-txt{
+    font-size:12px;
+    padding:0;
+    color:#3f516e;
+}
+.header-itab .itab-active .itab-txt{
+    text-shadow:1px 1px 0 #f5f5f5;
+}
+
+.header-itab .itab-close{
+    background:url(images/headeritab/tab_close.png) no-repeat 0 0;
+}
+.header-itab .itab-close:hover, 
+.header-itab .itab-active .itab-close:hover{
+    background-position:0 0;
+}
+.header-itab .itab-active .itab-close{
+    background-position:0 0;
+}
+.header-itab .itab-scroll-hdlt,
+.header-itab .itab-scroll-hdrb{
+    width:20px;
+    height:20px;
+    background-image:url(images/headeritab/itab-scrollbar.png);
+    background-repeat:no-repeat;
+}
+.header-itab .itab-scroll-hdlt,
+.header-itab .itab-scroll-hdlt:hover{
+    background-position:0 0;
+}
+.header-itab .itab-scroll-hdrb,
+.header-itab .itab-scroll-hdrb:hover{
+    background-position:0 -20px;
+}
+.header-itab .itab-scroll-hdlt-dis,
+.header-itab .itab-scroll-hdlt-dis:hover{
+    background-position:0 -40px;
+}
+.header-itab .itab-scroll-hdrb-dis,
+.header-itab .itab-scroll-hdrb-dis:hover{
+    background-position:0 -60px;
+}

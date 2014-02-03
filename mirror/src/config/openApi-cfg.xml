@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api>
+	<baidu>
+		<service name="accessKey" value="zyucjQSz4GoGy1280cHs2VY5" desc="百度地图ip服务" />
+		<service name="ip" value="http://api.map.baidu.com/location/ip" desc="百度地图ip服务" />
+	</baidu>
+</api>

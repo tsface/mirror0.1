@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.locale" value="zh_CN"/>
+	<constant name="struts.devMode" value="true"/>
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+	<!-- 上传允许的最大文件为100M，struts2默认允许的大小为2M -->
+	<constant name="struts.multipart.maxSize" value="104857600"/>
+	<package name="login" extends="struts-default" namespace="/login">
+		<action name="Login" class="com.lotus.login.LoginAction">
+			<result name="index">/login/index.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+	<package name="wx" extends="struts-default" namespace="/weixin">
+		<action name="WeiXin" class="com.lotus.weixin.service.WeiXinAction">
+			<result name="index">/login/index.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+	<package name="bdMap" extends="struts-default" namespace="/map">
+		<action name="BDMP" class="com.lotus.map.MapAction">
+			<result name="map.index">/map/index.jsp</result>
+			<result name="success">/index.jsp</result>
+		</action>
+	</package>
+	
+	<!--  
+	<package name="mim-default" extends="struts-default">
+	</package>
+	<include file="config/struts/*-struts.xml"/>
+	-->
+</struts>    

@@ -1,0 +1,78 @@
+/* main frame style */
+#header { background-color: #c3ccd7; *zoom:1; }
+#header:after { display:block; content:"clear"; height:0; clear:both; overflow:hidden; visibility:hidden; }
+
+.hd-lft-area, .hd-rgt-area { float:left; height: 72px; }
+.hd-lft-area { width: 89px; margin-left:-100%;  }
+.hd-rgt-area { width: 100%; }
+.hd-rgt-area .rgt-area-main { margin-left: 89px; }
+.hd-rgt-area .rgt-area-top { position: relative; height: 46px; line-height: 46px; }
+.hd-rgt-area .rgt-area-bottom { height: 26px; }
+
+#header .hd-lft-area { background:url(images/logo_bg.png) no-repeat 100% 50%; }
+#header .hd-rgt-area .rgt-area-main { background-color: #e9edf2;  }
+#header .hd-rgt-area .rgt-area-top { background: url(images/header_top_bg.png) repeat-x 0 0; }
+#header .hd-rgt-area .rgt-area-bottom { background: url(images/header_tab_bg.png) repeat-x 0 100%; }
+
+.logo-area { position: relative; }
+.logo-active-area { position: absolute; z-index:10; left: 0; top: 0; width: 257px; height: 72px; background: url(images/logo_active_bg.png) no-repeat 100% 50%; }
+.logo { position:absolute; display: block; z-index: 3; left: 7px; top: 9px; width: 61px; height: 57px; 
+		background: url(images/logo_sprites.png) no-repeat 0 0; text-decoration: none; outline: none;}
+.logo:hover { background-position: 0 -57px; }
+.logo-active { background-position: 0 -114px; }
+.logo-name { display:block; float:left; width: 160px; height: 20px; line-height: 1.0; margin-top: 13px; background:url(images/logo_name.png) no-repeat 0 50%; overflow:hidden; text-indent: -999em; /*color: #fff; font-size: 22px; font-family: 'Microsoft YaHei';*/ }
+
+.menu-marker { display: block; width: 24px; height: 27px; background: url(images/header_menu_marker.png) no-repeat 0 0; }
+
+.rgt-tools { position: absolute; right: 0; top: 1px; margin: 0; padding: 0; list-style: none; }
+.rgt-tools > li { float: left; margin: 0; padding: 0 12px; list-style: none; border-left: 1px solid #2971a2; }
+.rgt-tools > li > a { display:block; height: 45px; line-height: 45px; color: #fff; text-decoration:none; overflow: hidden; }
+.rgt-tools > li .msg-badge { padding: 2px 4px; font-size: 10px; background-color: #e03b27; color: #fff; line-height: 1.0; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; border-radius: 3px; }
+.hd-icon-profile, .hd-icon-msg, .hd-icon-setting, .hd-icon-exit, .hd-icon-arr1, .hd-icon-arr2 {
+	display: inline-block; *display: inline; *zoom:1; width: 20px; height: 20px; vertical-align: middle; margin-right: 5px; margin-top: -1px;
+	background: url(images/header_tool_icons.png) no-repeat 0 0;
+}
+.hd-icon-profile { background-position: 0 0; }
+.hd-icon-msg { background-position: -40px 0; }
+.hd-icon-setting { background-position: -20px 0; }
+.hd-icon-exit { background-position: -60px 0; }
+.hd-icon-arr1 { width: 10px; background-position: -80px 0; margin:0 0 0 5px; }
+.hd-icon-arr2 { width: 10px;  background-position: -90px 0; margin:0 0 0 5px; }
+
+/* main menu 系统菜单相关样式 */
+.menu-container {position:fixed; left:0; top:0; width:100%; z-index:10; display:none; }
+.menu-mask-holder { position:absolute; left:0; top:0; z-index:0; width:100%; height:100%; background-color:#fff; opacity:0; filter: alpha(opacity=0);}
+.menu-panel { width:100%; padding-top: 72px; padding-bottom:12px; overflow:hidden; background:transparent url(images/menu_shadow_h.png) repeat-x 0 100%; }
+
+.menu-inner { position:relative; z-index:2; padding:0 15px; overflow:hidden; font-size:0; background-color:#e9ebee; border-bottom:1px solid #fafafa; }
+.menu-item {position:relative; z-index:3; display:inline-block; *display:inline; *zoom:1; min-width:120px; vertical-align: top; 
+    padding:5px 0px 5px 0; border-right:1px solid #d4d9e1; border-left:1px solid #FAFAFA;
+    margin:0; margin-bottom:-2000px; padding-bottom:2000px; 
+    -webkit-transition-property: scale;
+    -webkit-transition-duration: 0.2s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+}
+.menu-item-hover, .menu-item:HOVER {-moz-box-shadow:0 0 15px rgba(0,0,0,.5); -webkit-box-shadow:0 0 15px rgba(0,0,0,.5); box-shadow:0 0 15px rgba(0,0,0,.5);}/* hover时，需要提高本item的z-index，否则菜单内部的元素无法覆盖另一个item */
+
+.menu-level1 { padding-bottom: 1px; }
+.menu-level1 label { display:block; font-weight:bold; font-size: 14px; color:#666; border-bottom:2px solid #3c87ba; padding:5px 0px 5px 12px; }
+.menu-list-level2 {margin-bottom: 1px; display:block;}
+/* 二级菜单项 */
+.menu-list-level2 > li > a { display:block; zoom:0; padding: 8px 0 8px 12px; font-size: 14px; color:#666;}
+.menu-list-level2 > li > a:HOVER { border-left:2px solid #3c87ba; padding-left:10px; background-color:#dce0e6; }
+/* 带有三级菜单的二级菜单项 */
+.menu-with-level3 {cursor: pointer; position: relative; overflow: visible; display:block; zoom:0; padding: 8px 0 8px 12px; font-size: 14px; color:#666; padding-right: 14px;} /*带有三级菜单的二级菜单*/
+.menu-with-level3:HOVER, .menu-with-level3-hover {border-left:2px solid #3c87ba; padding-left:10px; background-color:#dce0e6;}
+
+/* 三级菜单项 */
+.menu-level3-list > li > a { display:block; zoom:0; padding: 8px 0 8px 12px; font-size: 14px; color:#666;}
+.menu-level3-list > li > a:HOVER { border-left:2px solid #3c87ba; padding-left:10px; background-color:#dce0e6; }
+/* 禁用直接使用css样式显示的三级菜单 */
+.menu-with-level3 .icon-more {width: 8px; height: 13px; background:url(images/has_sub_menu.png) no-repeat; position: absolute; right: 3px; top: 11px;}
+.menu-level3-box {position: absolute; visibility: hidden; left: 100%; top: 0; background-color: #E9EBEE; width: 100%; min-width: 120px; border: 1px solid #A8B6CC;}
+
+/* 模拟出来的三级菜单的菜单项 */
+#fakeMenu {background-color: #E9EBEE; width: 100%; min-width: 120px; border: 1px solid #A8B6CC;}
+#fakeMenu li a { display:block; zoom:0; padding: 8px 0 8px 12px; font-size: 14px; color:#666;}
+#fakeMenu li a:HOVER { border-left:2px solid #3c87ba; padding-left:10px; background-color:#dce0e6; }

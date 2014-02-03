@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<network>
+	<node id="nmjl" label="王永山" desc="" identityType="IM" identityMiniType="1030001" icon="../images/protocol/qq.png"/>
+	<node id="wys" label="www.happysee.com" desc="" identityType="IM" identityMiniType="1030001" icon="../images/protocol/qq.png"/>
+
+	<link from="wys" to="nmjl" label="wys→nmjl" weight="2" orient="1" color="#e6550d"/>
+	
+</network>
